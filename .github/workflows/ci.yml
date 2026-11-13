@@ -1,4 +1,5 @@
-sname: Inventory Management System CI
+
+name: Inventory Management System CI
 
 on:
   push:
