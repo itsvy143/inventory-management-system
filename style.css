@@ -1,0 +1,355 @@
+/* ========================================
+   1. GENERAL STYLES
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* ========================================
+   2. HEADER
+======================================== */
+
+header {
+  background-color: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+/* ========================================
+   3. MAIN CONTAINER
+======================================== */
+
+main {
+  width: 92%;
+  max-width: 1150px;
+  margin: 30px auto;
+}
+
+section {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  color: #1e3a5f;
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   4. INVENTORY SUMMARY
+======================================== */
+
+.summary-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.summary-card {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summary-card h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 25px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+.products-card {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.units-card {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.value-card {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.low-stock-card {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* ========================================
+   5. FORM STYLES
+======================================== */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: white;
+  color: #1e293b;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #3b82f6;
+}
+
+/* ========================================
+   6. BUTTONS
+======================================== */
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.primary-button {
+  flex: 1;
+  background-color: #2563eb;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.cancel-button {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.cancel-button:hover {
+  background-color: #cbd5e1;
+}
+
+.edit-button {
+  background-color: #dbeafe;
+  color: #1e40af;
+  margin-right: 5px;
+}
+
+.edit-button:hover {
+  background-color: #bfdbfe;
+}
+
+.delete-button {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.delete-button:hover {
+  background-color: #fecaca;
+}
+
+/* ========================================
+   7. INVENTORY FILTERS
+======================================== */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-heading p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.filter-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* ========================================
+   8. INVENTORY TABLE
+======================================== */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+caption {
+  padding: 8px;
+  text-align: left;
+  color: #64748b;
+  font-size: 13px;
+}
+
+thead {
+  background-color: #1e3a5f;
+  color: white;
+}
+
+th,
+td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+td {
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.stock-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.in-stock {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.low-stock {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.out-of-stock {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+#empty-message {
+  text-align: center;
+  color: #64748b;
+  padding: 25px;
+}
+
+/* ========================================
+   9. FOOTER
+======================================== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* ========================================
+   10. RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 850px) {
+  .summary-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  main {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .summary-container {
+    gap: 10px;
+  }
+
+  .summary-card {
+    padding: 15px 10px;
+  }
+
+  .summary-card p {
+    font-size: 22px;
+  }
+
+  .filter-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
